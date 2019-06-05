@@ -58,10 +58,12 @@
 				
 			<div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
+                <a href="index.html" class="tag-cloud-link">Home</a>
                 <a href="#" class="tag-cloud-link">Picture</a>
                 <a href="#" class="tag-cloud-link">Voice</a>
-                <a href="#" class="tag-cloud-link">Word</a>
-                <a href="#" class="tag-cloud-link">Other</a>
+                <a href="model.php" class="tag-cloud-link">Word</a>
+				<a href="Prjectintro.html" class="tag-cloud-link">Projectintro</a>
+                <a href="Development.html" class="tag-cloud-link">Development introduction</a>
               </div>
             </div>
 			</div>
@@ -71,14 +73,27 @@
 	<section class="ftco-section">
 	<div class="row justify-content-center mb-5">
           <div class="col-md-7 heading-section text-center ftco-animate ">
-          	<span class="subheading">
-          		<i class="db-left"></i>
-          		Vocabulary 
-          		<i class="db-right"></i>
-          	</span>
-            <h2 class="mb-3">Key Words</h2>
-            <p>aaaaaaaaa, bbbbbbbbbb, ccccccccc, dddddddddddddd</p>
+            <h2 class="mb-3">Game Rank</h2>
+            <?php
+			$conn = mysqli_connect("localhost", "root", "7788", "rank");
+			// Check connection
+			if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+			} 
+			$sql = "SELECT id, studentnumber, name ,score FROM list";
+			$result = $conn->query($sql);
+			if ($result->num_rows > 0) {
+			// output data of each row
+			while($row = $result->fetch_assoc()) {
+				echo "<tr><td>" . $row["id"]. "</td><td>" . $row["studentnumber"] . "</td><td>"
+			. $row["name"]."</td><td>". $row["score"] . "</td></tr>";
+			}
+			echo "</table>";
+			} else { echo "0 results"; }
+			$conn->close();
+			?>
           </div>
+		  
 		 </div>
     </section>
 
