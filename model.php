@@ -75,7 +75,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate ">
             <h2 class="mb-3">Game Rank</h2>
             <?php
-			$conn = mysqli_connect("localhost", "root", "7788", "rank");
+			$conn = mysqli_connect("localhost", "multimedia", "7788", "rank");
 			// Check connection
 			if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
