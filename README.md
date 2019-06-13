@@ -70,13 +70,13 @@ Then create a databse called *user* with the tables *accounts* and *tasks*
 mysql> CREATE DATABASE user;
 mysql> USE user;
 ```
-Create table *accounts*:
+Create table *rank*:
 ```
-mysql> CREATE TABLE accounts (
+mysql> CREATE TABLE rank (
   user_id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(100),
-  pass VARCHAR(100),
-  email VARCHAR(100)
+  studentnumber INT(10),
+  name VARCHAR(10),
+  score INT(10)
   );
 ```
 Create table *tasks*:
