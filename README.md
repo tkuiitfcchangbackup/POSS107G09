@@ -87,6 +87,3 @@ Apache 2 was used as the web server for our web application.
 Contributing Guidelines
 This is the final version of our project but we would appreciate feedback of any kind that will help us improve in any aspect of our execution of this project.
 
-Authors
-Group Introduction (POSS107G08)
-We are a group of university students doing a project for our Practice of Open Source Software course. This course requires us to create a web application and because we wanted to make something practical that students like us will find useful, we made a to-do list.
